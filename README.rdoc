@@ -21,7 +21,7 @@ run:
 
 <tt>bundle install</tt>
 
-add to your layout:
+add to your layout's <HEAD> section:
 
 <tt>=include_i18n_editor</tt>
 
@@ -52,9 +52,9 @@ NOTICE: it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-loca
 * change localization key from id to rel in span I18n monkey patch
 * escape path for eval in hash_tools.rb (!!!)
 * translation workflow design
-* extract to gem
-* title, buttons, select options are broken
-* tools for refactoring - rename path especially
+* translation key is held in span id="en.translation.key". chack if the id attr can contain dots
+* title, buttons, select options are broken - filter them out
+* create tools for refactoring - especially path rename
 * paginantion on index
 * list missing translations
 * api for external access
