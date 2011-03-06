@@ -40,6 +40,7 @@ start server with environment variable:
 * when open in editor is requeseed and "show only missing" is enabled, check if the requested key is in the result set, if not cancel the fileter and retry
 * raise if not vaild html accepted as transalation
 * show key name as title in modal window
+* move all javascript functions to i18n namespace to prevent colision
 * make hash_tools as inherited class ExtendedHash from Hash (eradicate monkey patching)
 * extract translation controller name, model name, routing nammespace  to some config and make it dynamic
 * ESC to close modal window
