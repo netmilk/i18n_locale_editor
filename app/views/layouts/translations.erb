@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Translation editor</title>
+    <meta content="text/html;charset=UTF-8" http-equiv="content-type"/> 
+    <style media='all' type='text/css'>
+      body{ font-family: Verdana,Arial,sans-serif; border: 0; margin: 0; padding: 0;}
+      .i18n-translation-editor{padding: 10px}
+      .i18n-translation-key{font-size: 20px; padding-top: 10px}
+      .i18n-locale-label{:font-weight: bold; font-size: 30px; background-color: #111; color: #fff}
+      .i18n-translation-missing{}
+      .i18n-translation-cell{cursor: default}
+      .i18n-highlighted-cell{background-color: #eee;color:#000}
+      .i18n-highlighted-exclamation{font-size: 40px; color: #111; font-weight: bold; padding-left: 10px}
+    </style>
+
+    <%=include_i18n_editor%>
+
+  </head>
+
+  <body>
+    <div class="i18n-translation-editor">
+      <%= yield%>
+    </div>
+  </body>
+</html>
+

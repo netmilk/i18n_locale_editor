@@ -1,0 +1,42 @@
+<h1>Listing translations</h1>
+
+<%form_tag url_for({:action => 'set_translations'}), :method => :post do |form|%>
+  <%I18n.available_locales.each  do |locale|%>
+    <%= locale%>
+    <%= check_box_tag "translations[]", locale, session[:i18n_locale_editor_translations].include?(locale.to_s) ? true : false %>
+  <%end%>
+  only incomplete rows
+  <%= hidden_field_tag "show_only_incomplete", "false"%>
+  <%= check_box_tag "show_only_incomplete","true", session[:i18n_show_only_incomplete]%>
+  <%= submit_tag :show%>
+<%end%>
+<table>
+  <tr>
+    <%session[:i18n_locale_editor_translations].each do |locale|%>
+      <th class="i18n-locale-label"><%= locale%></th>
+    <%end%>
+  </tr>
+  <% @translations.each do |path, translations| %>
+    <tr>
+      <td colspan="<%=translations.length%>">
+        <div class="i18n-translation-key">
+          <%= path%>
+        </div>
+      </td>
+    </tr>
+    <tr>
+    <%translations.each do |language, translation|%>
+      <td class="i18n-translation-cell <%='i18n-translation-missing' if translation.blank?%>">
+        <div>
+          <span class="i18n-translation" id="<%=language + '.' + path%>"><%=translation%></span>
+          <%if translation.blank?%>
+            <span class="i18n-highlighted-exclamation">!</span>
+          <%end%>
+          </div>
+      </td>
+    <%end%>
+    </tr>
+  <% end %>
+</table>
+<br />
+

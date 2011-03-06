@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "i18n_locale_editor"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Rails i18n locale editor}
+    gem.description = %Q{Rails i18n locale visal editor, api for integration and tools as plugin}
     gem.email = "adam.kliment@virtualmaster.cz"
     gem.homepage = "http://github.com/n1k/i18n_locale_editor"
     gem.authors = ["Adam Kliment"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency "ya2yaml", ">=0.26"
+    gem.add_dependency "rails", ">= 2.3.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
