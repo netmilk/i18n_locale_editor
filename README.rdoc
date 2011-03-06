@@ -4,6 +4,7 @@
 * edit translations in-place in overlay window right on your live site
 * cool firebug-like translation key selector for localized strings
 * ajax lazy updating for better user experience
+* it autodetects if jQuery is not included in project and autoloads it from CDN as noConflict()
 * taranslations listing (index)
 * select which locales to show in translations index
 * show only keys with missing translations
