@@ -28,7 +28,7 @@
     <%translations.each do |language, translation|%>
       <td class="i18n-translation-cell <%='i18n-translation-missing' if translation.blank?%>">
         <div>
-          <span class="i18n-translation" id="<%=language + '.' + path%>"><%=translation%></span>
+          <span class="i18n-translation" id="<%=language.to_s + '.' + path%>"><%=translation%></span>
           <%if translation.blank?%>
             <span class="i18n-highlighted-exclamation">!</span>
           <%end%>

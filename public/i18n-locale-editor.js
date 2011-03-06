@@ -72,7 +72,7 @@ function i18n_send_form(){
 }
 
 function update_value(key,value) {
-  $j('span[id="'+key+'"]').siblings(".highlighted-exclamation").hide()
+  $j('span[id="'+key+'"]').siblings(".i18n-highlighted-exclamation").hide()
   $j('#i18n-working').show()
   url= '/translations/set_value/'+key
   request = $j.ajax({

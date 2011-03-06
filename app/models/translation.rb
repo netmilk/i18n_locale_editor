@@ -38,7 +38,7 @@ class Translation
     paths.each do |path|
       aggreg[path] = {}
       locales_array.each do |locale|
-        aggreg[path][locale] = translations[locale].find_by_path(locale + '.' + path)
+        aggreg[path][locale] = translations[locale].find_by_path(locale.to_s + '.' + path)
       end
     end
     if only_missing

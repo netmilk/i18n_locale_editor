@@ -1,6 +1,31 @@
-= i18n_locale_editor
+= Rails i18n locale editor
 
-Description goes here.
+== Features
+* edit translations in-place in overlay window on your live site
+* cool firebug-like live translation key selector for localized strings
+* ajax update
+* tarnslations listing (index)
+* select which locales to show on index
+* show keys with missing translations
+
+== Installation
+
+add to your Gemfile:
+
+<tt>gem "i18n_locale_editor"</tt>
+
+run:
+
+<tt>bundle install</tt>
+
+add to your layout:
+
+<tt>=include_i18n_editor</tt>
+
+start server with environment variable:
+
+<tt>I18N_EDITOR=true script/server</tt>
+
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +39,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Adam Kliment. See LICENSE for details.
+Copyright (c) 2011 Adam Kliment, Virtualmater. See LICENSE for details.
