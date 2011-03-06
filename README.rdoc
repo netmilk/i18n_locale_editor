@@ -1,12 +1,13 @@
 = Rails i18n locale editor
 
 == Features
-* edit translations in-place in overlay window on your live site
-* cool firebug-like live translation key selector for localized strings
-* ajax update
-* tarnslations listing (index)
-* select which locales to show on index
-* show keys with missing translations
+* edit translations in-place in overlay window right on your live site
+* cool firebug-like translation key selector for localized strings
+* ajax lazy updating for better user experience
+* taranslations listing (index)
+* select which locales to show in translations index
+* show only keys with missing translations
+* tested in Firefox and Chromium
 
 == Installation
 
@@ -26,17 +27,37 @@ start server with environment variable:
 
 <tt>I18N_EDITOR=true script/server</tt>
 
+== TODO
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+* tests
+* code review and documentation
+* test it on real-life translator's workflow to save clicks and improve efficiency (maybe add 'commit and next' to editor)
+* auto copy js asset and include by gem version in init.rb
+* when open in editor is requested, add locale from key to be shown on index if it is not set in session yet
+* when open in editor is requeseed and "show only missing" is enabled, check if the requested key is in the result set, if not cancel the fileter and retry
+* raise if not vaild html accepted as transalation
+* show key name as title in modal window
+* make hash_tools as inherited class ExtendedHash from Hash (eradicate monkey patching)
+* extract translation controller name, model name, routing nammespace  to some config and make it dynamic
+* ESC to close modal window
+* possibility to load another translations in modal
+* toggle wym editor in modal (cool)
+* change localization key from id to rel in span I18n monkey patch
+* escape path for eval in hash_tools.rb (!!!)
+* translation workflow design
+* extract to gem
+* title, buttons, select options are broken
+* tools for refactoring - rename path especially
+* paginantion on index
+* list missing translations
+* api for external access
+* scopes support for api (how)
+* export all locales to csv (it's done, but not included in this gem)
+* import all locales from csv (it's done, but not included in this gem)
+* key hitcounter
+* test in Opera, IE and other browsers...
+* review these issues and move them to the github's task tracker :) 
 
 == Copyright
 
-Copyright (c) 2011 Adam Kliment, Virtualmater. See LICENSE for details.
+Copyright (c) 2011 Adam Kliment, Virtualmater s.r.o. See LICENSE for details.
