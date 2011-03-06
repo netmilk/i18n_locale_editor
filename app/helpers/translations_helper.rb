@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module TranslationsHelper
   def include_i18n_editor
-    return nil if not ENV['I18N_EDITOR']I18N_PATCH == true
+    return nil if not ENV['I18N_EDITOR'].to_s == "true"
     javascript = "
       // i18n locale editor
       // =================
