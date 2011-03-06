@@ -29,6 +29,9 @@ start server with environment variable:
 
 <tt>I18N_EDITOR=true script/server</tt>
 
+NOTICE: it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-locale-editor-x.x.x.js on first start
+
+
 == TODO
 
 * tests
