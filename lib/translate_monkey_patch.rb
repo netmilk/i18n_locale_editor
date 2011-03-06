@@ -6,7 +6,7 @@
 #  def text_field_tag
 # /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/helpers/form_tag_helper.rb:
 
-if ENV['I18N_EDITOR']I18N_PATCH.to_s == "true"
+if ENV['I18N_EDITOR'].to_s == "true"
   module ActionView
     module Helpers
       module TranslationHelper
