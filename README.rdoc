@@ -1,6 +1,6 @@
 = Rails i18n locale editor
 
-Proof of concept for live locale editor fo Ruby on Rails
+Proof of concept of live locale editor for Ruby on Rails
 
 
 == Features
