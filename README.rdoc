@@ -9,7 +9,7 @@
 * show only keys with missing translations
 * unobtrusive JS inclusion - if jQuery is not included in project and async autoloads it from CDN as noConflict(), then loads itself
 * tested in Firefox and Chromium
-* tested on rails 2.3.8, 2.3.2
+* tested on rails 2.3.8, 2.3.2 with bundler see: http://gembundler.com/rails23.html
 
 == Installation
 
@@ -41,6 +41,7 @@ NOTICE: it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-loca
 * auto copy js asset and include by gem version in init.rb
 * when open in editor is requested, add locale from key to be shown on index if it is not set in session yet
 * when open in editor is requeseed and "show only missing" is enabled, check if the requested key is in the result set, if not cancel the fileter and retry
+* it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-locale-editor-x.x.x.js on every init, find better way 
 * raise if not vaild html accepted as transalation
 * show key name as title in modal window
 * move all javascript functions to i18n namespace to prevent colision
@@ -52,7 +53,7 @@ NOTICE: it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-loca
 * change localization key from id to rel in span I18n monkey patch
 * escape path for eval in hash_tools.rb (!!!)
 * translation workflow design
-* translation key is held in span id="en.translation.key". chack if the id attr can contain dots
+* translation key is held in span id="en.translation.key". check if the 'id' attribute can contain dots
 * title, buttons, select options are broken - filter them out
 * create tools for refactoring - especially path rename
 * paginantion on index
