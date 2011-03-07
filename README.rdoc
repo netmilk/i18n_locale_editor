@@ -1,4 +1,4 @@
-= Rails i18n locale editor
+= Rails i18n locale editor - bleeding edge
 
 == Features
 * edit translations in-place in overlay window right on your live site
