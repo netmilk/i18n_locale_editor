@@ -7,7 +7,7 @@
 * taranslations listing (index)
 * select which locales to show in translations index
 * show only keys with missing translations
-* unobtrusive inclusion - it autodetects if jQuery is not included in project and async autoloads it from CDN as noConflict(), then loads itself
+* unobtrusive JS inclusion - if jQuery is not included in project and async autoloads it from CDN as noConflict(), then loads itself
 * tested in Firefox and Chromium
 * tested on rails 2.3.8, 2.3.2
 
