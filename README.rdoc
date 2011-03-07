@@ -1,4 +1,7 @@
-= Rails i18n locale editor - bleeding edge
+= Rails i18n locale editor
+
+Proof of concept for live locale editor fo Ruby on Rails
+
 
 == Features
 * edit translations in-place in overlay window right on your live site
@@ -10,6 +13,7 @@
 * unobtrusive JS inclusion - if jQuery is not included in project and async autoloads it from CDN as noConflict(), then loads itself
 * tested in Firefox and Chromium
 * tested on rails 2.3.8, 2.3.2 with bundler see: http://gembundler.com/rails23.html
+* not designed as production CMS, it's for developers
 
 == Installation
 
@@ -29,8 +33,6 @@ start server with environment variable:
 
 <tt>I18N_EDITOR=true script/server</tt>
 
-NOTICE: it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-locale-editor-x.x.x.js on first start
-
 
 == TODO
 
@@ -41,7 +43,7 @@ NOTICE: it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-loca
 * auto copy js asset and include by gem version in init.rb
 * when open in editor is requested, add locale from key to be shown on index if it is not set in session yet
 * when open in editor is requeseed and "show only missing" is enabled, check if the requested key is in the result set, if not cancel the fileter and retry
-* it will copy javascript asset to RAILS_ROOT/public/javascripts/i18n-locale-editor-x.x.x.js on every init, find better way 
+* it will copy javascript assets to RAILS_ROOT/public/javascripts/ on every init, find some better way 
 * raise if not vaild html accepted as transalation
 * show key name as title in modal window
 * move all javascript functions to i18n namespace to prevent colision
