@@ -1,1 +1,1 @@
-require '../rails/init.rb'
+#require '../rails/init.rb'
