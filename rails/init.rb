@@ -1,11 +1,11 @@
 require 'hash_tools'
 require 'translate_monkey_patch'
-require 'ftools'
+require 'fileutils'
 
 if ENV['I18N_EDITOR']== "true"
-  src = File.join(File.dirname(__FILE__),'public',"i18n-locale-editor.js")
-  dst = File.join(RAILS_ROOT,'public', 'javascripts')
-  File.copy(src,dst)
+  src = File.join(File.dirname(__FILE__),'..','public','i18n_locale_editor')
+  dst = File.join(RAILS_ROOT,'public')
+  FileUtils.cp_r(src,dst)
 end
 
 %w{ models controllers helpers }.each do |dir|

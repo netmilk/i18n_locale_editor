@@ -33,7 +33,8 @@ module TranslationsHelper
             if(typeof($j) === 'undefined'){
               $j = jQuery.noConflict();
             }
-            i18n_lazy_load_js('/javascripts/i18n-locale-editor.js')
+            i18n_lazy_load_js('/i18n_locale_editor/i18n-locale-editor.js')
+            //i18n_lazy_load_js('/i18n_locale_editor/wymeditor/jquery.wymeditor.pack.js')
             clearInterval(interval);
           }
         },100)

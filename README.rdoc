@@ -43,9 +43,9 @@ start server with environment variable:
 * auto copy js asset and include by gem version in init.rb
 * when open in editor is requested, add locale from key to be shown on index if it is not set in session yet
 * when open in editor is requeseed and "show only missing" is enabled, check if the requested key is in the result set, if not cancel the fileter and retry
-* it will copy javascript assets to RAILS_ROOT/public/javascripts/ on every init, find some better way 
+* it will copy javascript assets to RAILS_ROOT/public/i18n_locale_editor on every init, find some better and unobtrusive way 
 * raise if not vaild html accepted as transalation
-* show key name as title in modal window
+* show key name in modal window
 * move all javascript functions to i18n namespace to prevent colision
 * make hash_tools as inherited class ExtendedHash from Hash (eradicate monkey patching)
 * extract translation controller name, model name, routing nammespace  to some config and make it dynamic
@@ -53,6 +53,7 @@ start server with environment variable:
 * possibility to load another translations in modal
 * toggle wym editor in modal (cool)
 * change localization key from id to rel in span I18n monkey patch
+* git, subversion support for tracking changes
 * escape path for eval in hash_tools.rb (!!!)
 * translation workflow design
 * translation key is held in span id="en.translation.key". check if the 'id' attribute can contain dots

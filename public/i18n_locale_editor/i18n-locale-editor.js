@@ -24,7 +24,7 @@ function attach_callbacks() {
 
 function detach_callbacks() {
   $j('.i18n-translation').unbind('click.i18n_selector').unbind('mouseover.i18n_selector').unbind('mouseout.i18n_selector');
-  $j('#i18n-button').css('background-color', 'blue');
+  $j('#i18n-button').css('background-color', '#111');
   blue_button();
 }
  
