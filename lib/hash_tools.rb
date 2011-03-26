@@ -13,7 +13,7 @@ class Hash
   
   def find_by_path(path)
     e ="self"
-    path_to_a(path).each{|i| e = e+"['#{i}']" }
+    path_to_a(path).each{|i| e = e+"['"+ escape_for_eval(i)+ "']" }
     begin 
       eval(e)
     rescue NoMethodError
@@ -27,9 +27,11 @@ class Hash
     create_path_if_not_exist(path)
     e ="self"
     path_a = path_to_a(path)
-    path_a.each{|i| e = e+"['#{i}']" }
+    path_a.each{|i| e = e+"['"+escape_for_eval(i)+"']" }
     string = string.gsub(/^[ \t]+/,"")
-    e = e+"='#{string}'"
+
+    string = escape_for_eval(string)
+    e = e+"='"+string+"'"
     begin
       eval(e)
       return true
@@ -43,9 +45,10 @@ class Hash
     return false if find_by_path(path).class.to_s == "Hash" && find_by_path(path).length > 0
     e ="self"
     path_a = path_to_a(path)
-    path_a.each{|i| e = e+"['#{i}']" }
-    #string = string.gsub(/^[ \t]+/,"")
-    e = e+"=string"
+    path_a.each{|i| e = e+"['"+ escape_for_eval(i)+"']" }
+    string = escape_for_eval(string)
+    e = e+"="+string.inspect+""
+
     begin
       eval(e)
       return true
@@ -101,5 +104,11 @@ class Hash
 
   def a_to_path(array)
     array.join(".")
+  end
+  
+  def escape_for_eval(string)
+    
+    string.gsub!("'", "\\\\'") if string.class == String
+    string
   end
 end
