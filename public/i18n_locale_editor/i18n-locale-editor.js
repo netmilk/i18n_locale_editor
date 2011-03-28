@@ -68,7 +68,8 @@ function fill_modal(element){
   //  });
   //})
 
-  $j('#i18n-commit').click(function(){
+  $j('#i18n-commit').click(function(event){
+    event.preventDefault();
     i18n_send_form();
   })
 }

@@ -54,7 +54,7 @@ start server with environment variable:
 * toggle wym editor in modal (cool)
 * change localization key from id to rel in span I18n monkey patch
 * git, subversion support for tracking changes
-* escape path for eval in hash_tools.rb (!!!)
+* <strike>escape path for eval in hash_tools.rb (!!!)</strike>
 * translation workflow design
 * translation key is held in span id="en.translation.key". check if the 'id' attribute can contain dots
 * title, buttons, select options are broken - filter them out
