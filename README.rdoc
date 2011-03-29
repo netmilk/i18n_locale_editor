@@ -4,6 +4,7 @@ Proof of concept of live locale editor for Ruby on Rails
 
 
 == Features
+
 * edit translations in-place in overlay window right on your live site
 * cool firebug-like translation key selector for localized strings
 * ajax lazy updating for better user experience
@@ -33,6 +34,11 @@ start server with environment variable:
 
 <tt>I18N_EDITOR=true script/server</tt>
 
+== Use
+
+* toggle selector by clicking on button in bottom right corner
+* click on some translation and edit translation directly in your site
+* navigate to /translations to see all translations in editor
 
 == TODO
 

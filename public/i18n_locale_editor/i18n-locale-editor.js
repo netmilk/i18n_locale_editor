@@ -17,9 +17,8 @@ function attach_callbacks() {
       $j(this).removeClass('i18n-highlighted')
       $j('#i18n-text').html('none')
     })
-    red_button();                                
   })
-
+  red_button(); 
 }
 
 function detach_callbacks() {
@@ -103,6 +102,7 @@ function update_value(key,value) {
     }
   })
 }
+
 function show_modal(){
         element = $j("#i18n-dialog");
         var maskHeight = $j(document).height();
@@ -117,7 +117,7 @@ function show_modal(){
 }
 
 function i18n_initialize_selectors() {
-  add_assets();
+  add_html();
   $j("#i18n-button").show()
   blue_button();
   $j('#i18n-modal-close').click(function(){
@@ -126,7 +126,7 @@ function i18n_initialize_selectors() {
 }
 
 function i18n_initialize_editor(){
-  add_assets();      
+  add_html();      
   $j('.i18n-translation-cell').click(function(){
     fill_modal($j('.i18n-translation', this));
     show_modal();
@@ -138,7 +138,7 @@ function i18n_initialize_editor(){
   )
 }
 
-function add_assets() {
+function add_html() {
   $j('\
   <div id= "i18n-placeholder" >\
     <div id="i18n-text">&nbsp;</div>\
@@ -170,6 +170,7 @@ function add_assets() {
   </style> \
   ').appendTo("head");
 }
+
 
 if(! ($j('.i18n-translation-editor').length == 0)){
   i18n_initialize_editor();
