@@ -60,7 +60,9 @@ function fill_modal(element){
   <div><a href="'+url+'#'+ element.attr('id') +'" target="_blank">open in translation editor</a></div>\
   '
   $j('#18n-modal-content').html(content);
-  
+
+  $j('#i18n-modal-header').html(element.attr('id'));
+
   //$j('#i18n-toggle-wymeditor').click(function(){
   //  $j('#i18n-form-value').wymeditor({
   //      updateSelector: "#i18n-commit"
@@ -148,6 +150,7 @@ function add_html() {
   \
   <div id="i18n-boxes">\
     <div id="i18n-dialog" class="i18n-window">\
+      <div id="i18n-modal-header">header</div>\
       <div id="18n-modal-content"></div>\
       <a href="#" id="i18n-modal-close" onclick="hide_modal();return false;">close window</a>\
     </div>\
@@ -157,6 +160,7 @@ function add_html() {
   $j('\
   <style type="text/css">  \
     .i18n-highlighted{ cursor: default; outline: 3px solid yellow}  \
+    #i18n-modal-header{ color: black; font-size: 15px; padding-top: 10px; padding-bottom: 10px; font-weight: bold}\
     #i18n-text{ text-align: right; }\
     #i18n-working{ text-align: center;line-height: 30px;width: 50px; height: 30px; float: right; background-color: #444; color: white;}\
     #i18n-button{ text-align: center;line-height: 30px;width: 50px; height: 30px; float: right; background-color: #111; color: white;}\

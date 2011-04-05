@@ -45,6 +45,7 @@ start server with environment variable:
 * tests
 * code review and documentation
 * rails 3 support
+* start using jQuery temlates, it's cool http://api.jquery.com/category/plugins/templates/
 * test it on real-life translator's workflow to save clicks and improve efficiency (maybe add 'commit and next' to editor)
 * auto copy js asset and include by gem version in init.rb
 * when open in editor is requested, add locale from key to be shown on index if it is not set in session yet
