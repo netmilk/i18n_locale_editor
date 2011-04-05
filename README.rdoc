@@ -11,10 +11,10 @@ Proof of concept of live locale editor for Ruby on Rails
 * taranslations listing (index)
 * select which locales to show in translations index
 * show only keys with missing translations
-* unobtrusive JS inclusion - if jQuery is not included in project and async autoloads it from CDN as noConflict(), then loads itself
+* unobtrusive JS inclusion - if jQuery is not included in project, editor loads it asynchronously from CDN as noConflict(), then loads itself
 * tested in Firefox and Chromium
 * tested on rails 2.3.8, 2.3.2 with bundler see: http://gembundler.com/rails23.html
-* not designed as production CMS, it's for developers
+* not designed as production CMS, it's for developers and translators
 
 == Installation
 
@@ -49,6 +49,7 @@ start server with environment variable:
 * auto copy js asset and include by gem version in init.rb
 * when open in editor is requested, add locale from key to be shown on index if it is not set in session yet
 * when open in editor is requeseed and "show only missing" is enabled, check if the requested key is in the result set, if not cancel the fileter and retry
+* make saving back to yaml atomic (save to /tmp and move)
 * it will copy javascript assets to RAILS_ROOT/public/i18n_locale_editor on every init, find some better and unobtrusive way 
 * raise if not vaild html accepted as transalation
 * show key name in modal window
